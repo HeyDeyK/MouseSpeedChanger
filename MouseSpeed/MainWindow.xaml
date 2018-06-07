@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:MouseSpeed"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+
+
+    <Canvas>
+        <Label Content="Change your mouse speed" Canvas.Left="36" Canvas.Top="28"></Label>
+        <Slider Canvas.Left="10" Canvas.Top="59" Width="230" RenderTransformOrigin="0.5,0.5" Value="{Binding SliderPomerValue}">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Button Content="Normal speed" Height="30" Width="119" Canvas.Left="47" Canvas.Top="83" Command="{Binding ClickCommand}"></Button>
+        <Label Content="{Binding SliderPomerValue}" Height="39" Width="95" Canvas.Left="248" Canvas.Top="47"></Label>
+    </Canvas>
 </Window>
