@@ -22,5 +22,33 @@
         </Slider>
         <Button Content="Normal speed" Height="30" Width="119" Canvas.Left="47" Canvas.Top="83" Command="{Binding ClickCommand}"></Button>
         <Label Content="{Binding SliderPomerValue}" Height="39" Width="95" Canvas.Left="248" Canvas.Top="47"></Label>
+        <Label Content="Change your wheel speed" Canvas.Left="36" Canvas.Top="118"/>
+        <Label Content="{Binding SliderWheelSpeed}" Height="39" Width="95" Canvas.Left="248" Canvas.Top="118"/>
+        <Slider Canvas.Left="10" Canvas.Top="167" Width="230" RenderTransformOrigin="0.5,0.5" Value="{Binding SliderWheelSpeed}">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label Content="Prohodit tlačítka" Canvas.Top="197"/>
+        <CheckBox IsChecked="{Binding SwapButtons}" Command="{Binding CmdSwapButtons}" Canvas.Left="102" Canvas.Top="202" RenderTransformOrigin="0.409,0.524"></CheckBox>
+        <Label Content="Doubleclick speed" Canvas.Left="36" Canvas.Top="228"/>
+        <Slider Canvas.Left="10" Canvas.Top="278" Width="230" RenderTransformOrigin="0.5,0.5" Value="{Binding SliderDoubleClickSpeed}">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+        <Label Content="{Binding SliderDoubleClickSpeed}" Height="39" Width="95" Canvas.Left="248" Canvas.Top="202"/>
+
+
     </Canvas>
 </Window>
